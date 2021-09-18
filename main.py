@@ -32,8 +32,8 @@ async def on_message(message):
     # 藍染がずるいぞって言います
     #    await message.channel.send('https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg')
     # 藍染以外にもずるいぞって言わせるようにしました    
-        zuruizo_list = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg', 'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg']
-        p = np.array([85,15])
+        zuruizo_list = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg', 'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888739926433222656/dc3b39f19e94c37d.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888745753185501195/zuruu.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888748787412135946/sm_3088_036.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png']
+        p = np.array([58,10,10,10,10,2])
         p = p / sum(p)
         await message.channel.send(np.random.choice((zuruizo_list),p=p))
     
@@ -131,6 +131,14 @@ async def on_message(message):
     elif 'SSS' in message.content:
         await message.channel.send('https://cdn.discordapp.com/attachments/796357249743585290/865931723668455444/2021-07-17_21.20.34-removebg-preview.png')
 
+    
+    # もうめんどうみきれよう。って言うと
+    if 'もうめんどうみきれよう。' in message.content or 'もうめんどうみきれよう' in message.content:
+        # 尾崎も便乗してくれます　偶にカイトも言ってくれます
+        mendou_list = ['https://cdn.discordapp.com/attachments/796945445380816906/867359623913013248/ozaki.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888742212022714368/mikireyoooo.jpg']
+        p = np.array([90,10])
+        p = p / sum(p)
+        await message.channel.send(np.random.choice((mendou_list),p=p))
 
 
 
