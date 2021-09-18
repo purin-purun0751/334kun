@@ -43,10 +43,13 @@ async def on_message(message):
     # ねないこだれだ　が出てきます        
         await message.channel.send('https://images-na.ssl-images-amazon.com/images/I/81Yp7djAE+L.jpg')
 
-    # ライナーに助けを求めたら　〇
+       # ライナーに助けを求めたら　〇
     if message.content.startswith('ライナアアア') or message.content.endswith('アアアアアア'):
-    # ライナーは静かにして欲しいといいます
-        await message.channel.send('https://pbs.twimg.com/media/DqzBEMbU8AAzjbR.jpg')
+    # ライナーが複数パターンに分かれて答えてくれます    
+        reiner_list = ['https://pbs.twimg.com/media/DqzBEMbU8AAzjbR.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888675473293455450/ozaki.jpg']
+        p = np.array([85,15])
+        p = p / sum(p)
+        await message.channel.send(np.random.choice((reiner_list),p=p))
     
     # いーじゃんって言ったら
     if message.content.startswith('いーじゃん') or message.content.startswith('イージャン'):
