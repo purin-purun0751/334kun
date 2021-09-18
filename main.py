@@ -78,8 +78,12 @@ async def on_message(message):
     # ハルトオオオオオオオオオオオオオ　〇
     if 'ハルトオオオ' in message.content:
     # ハルトオオオオオオオオオオオオオ
-        await message.channel.send('https://cdn.discordapp.com/attachments/796357249743585290/841019229548707840/R6ac126fab28a92ff5b4ab89942728b15_1.png')
-
+        haruto_list = ['https://cdn.discordapp.com/attachments/796357249743585290/841019229548707840/R6ac126fab28a92ff5b4ab89942728b15_1.png', 'https://cdn.discordapp.com/attachments/796357249743585290/888757735838064670/1.jpg']
+        p = np.array([85,15])
+        p = p / sum(p)
+        await message.channel.send(np.random.choice((haruto_list),p=p))
+        
+        
     # 兄さんは嫌いだって言っちゃうと 〇
     if '兄さんは嫌いだ' in message.content:
     # ハルトも便乗してきます
