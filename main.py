@@ -33,10 +33,10 @@ async def on_message(message):
     #    await message.channel.send('https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg')
     # 藍染だけじゃなくて、与謝野晶子初め、魑魅魍魎がずるいぞって言いに来るようにしました
     # zuruizo_list 現在8つ    
-        zuruizo_list = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg', 'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888739926433222656/dc3b39f19e94c37d.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888745753185501195/zuruu.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888748787412135946/sm_3088_036.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702655762542/image1.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702336991264/image0.png']
+        ZURUIZO_LIST = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg', 'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888739926433222656/dc3b39f19e94c37d.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888745753185501195/zuruu.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888748787412135946/sm_3088_036.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702655762542/image1.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702336991264/image0.png']
         p = np.array([38,10,10,10,10,10,10,2])
         p = p / sum(p)
-        await message.channel.send(np.random.choice((zuruizo_list),p=p))
+        await message.channel.send(np.random.choice((ZURUIZO_LIST),p=p))
     
     
     # ねないこって誰かが言ったら  〇
