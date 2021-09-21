@@ -33,7 +33,14 @@ async def on_message(message):
     #    await message.channel.send('https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg')
     # 藍染だけじゃなくて、与謝野晶子初め、魑魅魍魎がずるいぞって言いに来るようにしました
     # zuruizo_list 現在8つ    
-        ZURUIZO_LIST = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg', 'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888739926433222656/dc3b39f19e94c37d.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888745753185501195/zuruu.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888748787412135946/sm_3088_036.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702655762542/image1.png', 'https://cdn.discordapp.com/attachments/796357249743585290/889538702336991264/image0.png']
+        ZURUIZO_LIST = ['https://pbs.twimg.com/media/DkZfWzGU0AAtVQt.jpg',
+                        'https://pbs.twimg.com/media/DJLmJjJVAAElBjF.jpg',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/888739926433222656/dc3b39f19e94c37d.jpg',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/888745753185501195/zuruu.jpg',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/888748787412135946/sm_3088_036.jpg',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/889538702655762542/image1.png',
+                        'https://cdn.discordapp.com/attachments/796357249743585290/889538702336991264/image0.png']
         p = np.array([38,10,10,10,10,10,10,2])
         p = p / sum(p)
         await message.channel.send(np.random.choice((ZURUIZO_LIST),p=p))
@@ -47,10 +54,11 @@ async def on_message(message):
        # ライナーに助けを求めたら　〇
     if message.content.startswith('ライナアアア') or message.content.endswith('アアアアアア'):
     # ライナーが複数パターンに分かれて答えてくれます    
-        reiner_list = ['https://pbs.twimg.com/media/DqzBEMbU8AAzjbR.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888675473293455450/ozaki.jpg']
+        REINER_LIST = ['https://pbs.twimg.com/media/DqzBEMbU8AAzjbR.jpg',
+                       'https://cdn.discordapp.com/attachments/796357249743585290/888675473293455450/ozaki.jpg']
         p = np.array([85,15])
         p = p / sum(p)
-        await message.channel.send(np.random.choice((reiner_list),p=p))
+        await message.channel.send(np.random.choice((REINER_LIST),p=p))
     
     # いーじゃんって言ったら
     if message.content.startswith('いーじゃん') or message.content.startswith('イージャン'):
@@ -79,10 +87,11 @@ async def on_message(message):
     # ハルトオオオオオオオオオオオオオ　〇
     if 'ハルトオオオ' in message.content:
     # ハルトオオオオオオオオオオオオオ
-        haruto_list = ['https://cdn.discordapp.com/attachments/796357249743585290/841019229548707840/R6ac126fab28a92ff5b4ab89942728b15_1.png', 'https://cdn.discordapp.com/attachments/796357249743585290/888757735838064670/1.jpg']
+        HARUTO_LIST = ['https://cdn.discordapp.com/attachments/796357249743585290/841019229548707840/R6ac126fab28a92ff5b4ab89942728b15_1.png',
+                       'https://cdn.discordapp.com/attachments/796357249743585290/888757735838064670/1.jpg']
         p = np.array([85,15])
         p = p / sum(p)
-        await message.channel.send(np.random.choice((haruto_list),p=p))
+        await message.channel.send(np.random.choice((HARUTO_LIST),p=p))
         
         
     # 兄さんは嫌いだって言っちゃうと 〇
@@ -140,10 +149,11 @@ async def on_message(message):
     # もうめんどうみきれよう。って言うと
     if 'もうめんどうみきれよう。' in message.content or 'もうめんどうみきれよう' in message.content:
         # 尾崎も便乗してくれます　偶にカイトも言ってくれます
-        mendou_list = ['https://cdn.discordapp.com/attachments/796945445380816906/867359623913013248/ozaki.jpg', 'https://cdn.discordapp.com/attachments/796357249743585290/888742212022714368/mikireyoooo.jpg']
+        MENDOU_LIST = ['https://cdn.discordapp.com/attachments/796945445380816906/867359623913013248/ozaki.jpg',
+                       'https://cdn.discordapp.com/attachments/796357249743585290/888742212022714368/mikireyoooo.jpg']
         p = np.array([90,10])
         p = p / sum(p)
-        await message.channel.send(np.random.choice((mendou_list),p=p))
+        await message.channel.send(np.random.choice((MENDOU_LIST),p=p))
 
 
 
