@@ -155,7 +155,14 @@ async def on_message(message):
         p = p / sum(p)
         await message.channel.send(np.random.choice((MENDOU_LIST),p=p))
 
-
+    # 伝説って？
+    if 'って？' in message.content:
+        DENSETSU_LIST = ['https://cdn.discordapp.com/attachments/796357249743585290/890819533986746388/En_43HBVkAEQToc.jpg',
+                         'https://cdn.discordapp.com/attachments/796782540895682603/890845463278911488/yosanoaakiko.jpg']
+        # ああ！
+        p = np.array([90,10])
+        p = p / sum(p)
+        await message.channel.send(np.random.choice((DENSETSU_LIST),p=p))
 
 
 # 静かな時に叫ぶと爆発します　発見されたらちょっと弄る 踏まれました
@@ -188,6 +195,7 @@ async def on_message(message):
     embed3.add_field(name="#inv",value="`無期限招待URLを発行`",inline=True)
     embed3.add_field(name="#tyc",value="`ディスコのチャットコマンド一覧`",inline=True)
     embed3.add_field(name="#dice",value="`サイコロが振れます`",inline=True)
+    embed3.add_field(name="#yt",value="`Youtube Togetherのコピペ用コマンドを出せます`",inline=True)
 
     if message.content == '#command':
         await message.channel.send(embed=embed3)
@@ -226,6 +234,11 @@ async def on_message(message):
             sleep(1) # 1秒待たせる
             await message.reply(dice_roll) # #dice コマンドの発信者に対して、サイコロの結果を返信する
             
+            
+    #Youtube Togetherのコピペ用コマンド（多分使わね）
+    embed4 = discord.Embed(title="yt! party 796979552093077534",description="Youtube Togetherのコピペ用コマンドです。\nコピペして使ってください。", color=0x24adff)
+    if message.content == '#yt':
+       await message.channel.send(embed=embed4)
             
 # ここ ↓ は時間指定で送る系統
 
