@@ -41,7 +41,7 @@ async def on_message(message):
                         'https://cdn.discordapp.com/attachments/796357249743585290/888743847646076928/image0.png',
                         'https://cdn.discordapp.com/attachments/796357249743585290/889538702655762542/image1.png',
                         'https://cdn.discordapp.com/attachments/796357249743585290/889538702336991264/image0.png']
-        p = np.array([38,10,10,10,10,10,10,2])
+        p = np.array([54,7.5,7.5,7.5,7.5,7.5,7.5,1])
         p = p / sum(p)
         await message.channel.send(np.random.choice((ZURUIZO_LIST),p=p))
     
